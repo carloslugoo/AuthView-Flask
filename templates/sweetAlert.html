@@ -1,0 +1,30 @@
+ <!-- sweetAlert2 -->
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+        <!-- Generamos una nueva variable de messages con sweetalert2 -->
+        {% with messages = get_flashed_messages(with_categories=True) %}
+            {% if messages %}
+                {% for category, message in messages %}
+                    {% if category == 'error' %}
+                        <script>
+                            Swal.fire({
+                                position: 'center',
+                                icon: 'error',
+                                text: "Las contraseñas no coinciden!",
+                                showConfirmButton: false,
+                                timer: 5000
+                            })
+                        </script>
+                    {% else %}
+                        <script>
+                            Swal.fire({
+                                position: 'center',
+                                icon: 'success',
+                                text: "Cuenta creada satisfactoriamente!",
+                                showConfirmButton: false,
+                                timer: 5000
+                            })
+                        </script>
+                    {% endif %}
+                {% endfor %}
+            {% endif %}
+        {% endwith  %}
