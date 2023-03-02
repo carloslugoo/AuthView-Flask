@@ -1,4 +1,4 @@
-<h1 align="center"> Flask - Inicio de Sesion y Registro </h1>
+<h1 align="center"> Flask - Inicio de sesión y registro </h1>
 
 Inicio de sesion y registro que utiliza cookies para la sesion. 
 
